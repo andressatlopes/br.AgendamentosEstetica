@@ -1,4 +1,4 @@
-@charset "ISO-8859-1";
+
 * {
 	margin: 0;
 	padding: 0;
@@ -9,7 +9,7 @@ ul {
 	list-style: none;
 }
 
-/* tira toda decoraÁ„o que existe no texto */
+/* tira toda decora√ß√£o que existe no texto */
 a {
 	text-decoration: none;
 }
@@ -18,25 +18,24 @@ img {
 	align-items: right;
 }
 
-/*====  Vari·veis ==== */
-/* :root { - */
-/* 	-header-height: 4.5rem; */
-/* 	/* colors  - */
-/* 	-hue: 159; */
-/* 	/* HSL color mode -*/
-/* 	-base-color: hsl(var(- -hue) 36% 57%); - */
-/* 	-base-color-second: hsl(var(- -hue) 65% 88%); - */
-/* 	-base-color-alt: hsl(var(- -hue) 57% 53%); - */
-/* 	-title-color: hsl(var(- -hue) 41% 10%); - */
-/* 	-text-color: hsl(0 0% 46%); - */
-/* 	-text-color-light: hsl(0 0% 98%); - */
-/* 	-body-color: hsl(0 0% 98%); */
-/* 	/* fonts  - */
-/* 	-title-font-size: 1.875rem; - */
-/* 	-subtitle-font-size: 1rem; - */
-/* 	-title-font: 'Poppins', sans-serif; - */
-/* 	-body-font: 'DM Sans', sans-serif; */
-/* } */
+/*====  Vari√°veis ==== */
+:root { 
+	--header-height: 4.5rem;
+	 /*colors*/  
+	--hue: 159;
+	--base-color: hsl(var(- -hue) 36% 57%); 
+	--base-color-second: hsl(var(- -hue) 65% 88%); 
+	--base-color-alt: hsl(var(- -hue) 57% 53%); 
+	--title-color: hsl(var(- -hue) 41% 10%); 
+	--text-color: hsl(0 0% 46%); 
+	--text-color-light: hsl(0 0% 98%); 
+	--body-color: hsl(0 0% 98%);
+	/* fonts  -*/
+	--title-font-size: 1.875rem; 
+	--subtitle-font-size: 1rem; 
+	--title-font: 'Poppins', sans-serif; 
+	--body-font: 'DM Sans', sans-serif;
+}
 
 /*===  BASE === */
 html {
@@ -74,12 +73,12 @@ body {
 	transition: background 0.3s;
 }
 
-/*mudanÁa de cor do bot„o agendar um horario quando o mouse passa por cima*/
+/*mudan√ßa de cor do bot√£o agendar um horario quando o mouse passa por cima*/
 .button:hover {
 	background: var(- -base-color-alt);
 }
 
-/*cria a linha divisÛria que comeÁa com uma cor mais clara e dps mais escura*/
+/*cria a linha divis√≥ria que come√ßa com uma cor mais clara e dps mais escura*/
 .divider-1 {
 	height: 1px;
 	background: linear-gradient(270deg, hsla(var(- -hue), 36%, 57%, 1),
@@ -158,7 +157,7 @@ nav {
 	height: var(- -header-height);
 	display: flex; /* elemento um do lado do outro */
 	align-items: center;
-	justify-content: space-between; /*justificaÁ„o*/
+	justify-content: space-between; /*justifica√ß√£o*/
 	width: 100%;
 }
 
@@ -555,3 +554,4 @@ footer .social a:hover {
 		-title-font-size: 2.25rem; 
 		-subtitle-font-size: 1.125rem;
 	}
+}
