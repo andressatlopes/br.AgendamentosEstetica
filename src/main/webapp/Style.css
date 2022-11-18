@@ -23,7 +23,7 @@ img {
 	--header-height: 4.5rem;
 	 /*colors*/  
 	--hue: 159;
-	--base-color: hsl(var(- -hue) 36% 57%); 
+	--base-color: hsl(var(--hue) 36% 57%); 
 	--base-color-second: hsl(var(- -hue) 65% 88%); 
 	--base-color-alt: hsl(var(- -hue) 57% 53%); 
 	--title-color: hsl(var(- -hue) 41% 10%); 
@@ -63,19 +63,19 @@ body {
 
 .button {
 	background-color: rgb(rgba(12, 179, 245, 0.333));
-	color: var(- -text-color-light);
+	color: var(--text-color-light);
 	height: 3.5rem;
 	display: inline-flex;
 	align-items: center;
 	padding: 0 2rem;
 	border-radius: 0.25rem;
-	font: 500 1rem var(- -body-font);
+	font: 500 1rem var(--body-font);
 	transition: background 0.3s;
 }
 
 /*mudança de cor do botão agendar um horario quando o mouse passa por cima*/
 .button:hover {
-	background: var(- -base-color-alt);
+	background-color: red;
 }
 
 /*cria a linha divisória que começa com uma cor mais clara e dps mais escura*/
@@ -88,7 +88,7 @@ body {
 .divider-2 {
 	height: 1px;
 	background: linear-gradient(270deg, hsla(var(- -hue), 65%, 88%, 0.34),
-		hsla(var(- -hue), 36%, 57%, 1));
+		hsla(var(--hue), 36%, 57%, 1));
 }
 
 /*====  LAYOUT ==== */
@@ -104,6 +104,7 @@ body {
 
 .section {
 	padding: calc(5rem + var(- -header-height)) 0;
+	background-color: #F9F9F9;
 }
 
 .section .title {
@@ -119,7 +120,7 @@ body {
 }
 
 .section header strong {
-	color: var(- -base-color);
+	color: #727272;
 }
 
 #header {
