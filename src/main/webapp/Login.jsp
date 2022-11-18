@@ -7,12 +7,12 @@
 <title>Login</title>
 </head>
 <body>
-	<form>
+	<form action="ClienteHomeServlet" method="post">
 		<label>Usuario</label>
 		<input type="text" id="UserName" name="UserName">
 		<label>Senha</label>
-		<input type="text" id="UserPwd" name="UserPwd"> <input
-			type="submit" value="Salvar" />
+		<input type="text" id="UserPwd" name="UserPwd"> 
+		<input type="submit" value="Entrar" />
 	</form>
 </body>
 </html>

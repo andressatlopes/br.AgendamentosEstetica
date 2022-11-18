@@ -1,6 +1,7 @@
 package br.AgendamentoEstetica.Principal.App;
 
 import br.AgendamentoEstetica.Principal.Model.Procedimento;
+import br.AgendamentoEstetica.Principal.dao.PessoaDao;
 import br.AgendamentoEstetica.Principal.dao.ProcedimentoDao;
 
 public class Main {
@@ -15,6 +16,7 @@ public class Main {
 		
 		ProcedimentoDao procDao = new ProcedimentoDao();
 		procDao.save(proc);
+		PessoaDao pd = new PessoaDao();
 
 	}
 
