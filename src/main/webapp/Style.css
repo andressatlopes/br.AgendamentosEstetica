@@ -1,4 +1,4 @@
-
+@import url("");
 * {
 	margin: 0;
 	padding: 0;
@@ -23,7 +23,7 @@ img {
 	--header-height: 4.5rem;
 	 /*colors*/  
 	--hue: 159;
-	--base-color: hsl(var(--hue) 36% 57%); 
+	--base-color: hsl(var(--hue) 36% 57%);
 	--base-color-second: hsl(var(- -hue) 65% 88%); 
 	--base-color-alt: hsl(var(- -hue) 57% 53%); 
 	--title-color: hsl(var(- -hue) 41% 10%); 
@@ -60,7 +60,10 @@ body {
 	padding: 18dp;
 	align-items: left;
 }
-
+.navCor{
+	background: #f4576d;
+	color: #f4576d;
+}
 .button {
 	background-color: rgb(rgba(12, 179, 245, 0.333));
 	color: var(--text-color-light);
@@ -519,12 +522,6 @@ footer .social a:hover {
 	.card {
 		padding-left: 3rem;
 		padding-right: 3rem;
-	}
-
-	/* testimonials */
-	#testimonials .container {
-		margin-left: auto;
-		margin-right: auto;
 	}
 
 	/* contact */

@@ -10,16 +10,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.jasper.tagplugins.jstl.core.If;
 import org.hibernate.mapping.List;
 
+import br.AgendamentoEstetica.Principal.Model.Atendente;
 import br.AgendamentoEstetica.Principal.Model.Cliente;
+import br.AgendamentoEstetica.Principal.dao.AtendenteDao;
 import br.AgendamentoEstetica.Principal.dao.ClienteDao;
 
 /**
  * Servlet implementation class ClienteHomeServlet
  */
 @WebServlet(description = "Cliente acessando do 'agendar horario'", urlPatterns = { "/ClienteHomeServlet" })
-public class ClienteHomeServlet extends HttpServlet {
+public class HomeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	public Boolean flag;
@@ -27,7 +30,7 @@ public class ClienteHomeServlet extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ClienteHomeServlet() {
+    public HomeServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -46,18 +49,21 @@ public class ClienteHomeServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String login = request.getParameter("UserName");
 		String senha = request.getParameter("UserPwd");
-		ClienteDao cd = new ClienteDao();
-		Cliente c = new Cliente();
-		c.setLogin(login);
-		c.setSenha(senha);
-		for (Cliente item : cd.findAll(null)) {
-			if (item.getLogin() == login){
-				if (item.getSenha() == senha) {
-					  RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/Agendamento.jsp");
-					  dispatcher.forward(request, response);
-				}
+		Atendente a = new Atendente();
+		AtendenteDao ad = new AtendenteDao();
+		
+		a.setLogin(login);
+		a.setSenha(senha);
+
+		
+		for (Atendente item : ad.findAll(null)) {
+			if (item.getSenha() == senha) {
+				  RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/Perfil.jsp");
+				  dispatcher.forward(request, response);
 			}
-			
+			else {
+				response.setHeader("Refresh", "0; URL=");
+			}
 		}
 		
 		//doGet(request, response);
