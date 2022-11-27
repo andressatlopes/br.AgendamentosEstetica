@@ -1,16 +1,13 @@
 package br.AgendamentoEstetica.Principal.Model;
 
-import java.sql.Date;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Optional;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -40,8 +37,8 @@ public class Agendamento {
 	public void setHorario(String horario) {
 		this.horario = horario;
 	}
-	public Cliente getCliente() {
-		return cliente;
+	public Optional<Cliente> getCliente() {
+		return Optional.ofNullable(cliente);
 	}
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;

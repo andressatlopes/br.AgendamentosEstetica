@@ -1,7 +1,7 @@
 package br.AgendamentosEstetica.Principal.Servelets;
 
-import java.io.IOException;
-import java.lang.ProcessBuilder.Redirect;
+import br.AgendamentoEstetica.Principal.Model.Atendente;
+import br.AgendamentoEstetica.Principal.dao.AtendenteDao;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,14 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.apache.jasper.tagplugins.jstl.core.If;
-import org.hibernate.mapping.List;
-
-import br.AgendamentoEstetica.Principal.Model.Atendente;
-import br.AgendamentoEstetica.Principal.Model.Cliente;
-import br.AgendamentoEstetica.Principal.dao.AtendenteDao;
-import br.AgendamentoEstetica.Principal.dao.ClienteDao;
+import java.io.IOException;
 
 /**
  * Servlet implementation class ClienteHomeServlet
