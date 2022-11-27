@@ -1,5 +1,9 @@
 package br.AgendamentosEstetica.Principal.Servelets;
 
+import br.AgendamentoEstetica.Principal.Model.Cliente;
+import br.AgendamentoEstetica.Principal.Model.Endereco;
+import br.AgendamentoEstetica.Principal.dao.ClienteDao;
+
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -27,7 +31,19 @@ public class PerfilClienteServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		Cliente c = new Cliente();
+		Endereco e = new Endereco();
+		ClienteDao cd = new ClienteDao();
+
+		c.setNome(request.getParameter("name"));
+		c.setIdade(Integer.parseInt(request.getParameter("idade")));
+		c.setCpf(request.getParameter("cpf"));
+		c.setTelefone(request.getParameter("fone"));
+		e.setRua(request.getParameter("rua"));
+		e.setBairro(request.getParameter("bairro"));
+		e.setNumero(request.getParameter("numero"));
+		c.setEndereco(e);
+		cd.save(c);
 	}
 
 	/**

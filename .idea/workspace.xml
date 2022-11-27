@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd02e80a-538d-42b5-90c6-a533c37f5211" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/AgendamentosEstetica/Principal/Servelets/AgendamentoServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/AgendamentosEstetica/Principal/Servelets/EsteticistaServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/AgendamentosEstetica/Principal/Servelets/PerfilAtendenteServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/AgendamentosEstetica/Principal/Servelets/ProcedimentoServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/AgendamentoEstetica/Principal/Model/Agendamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/AgendamentoEstetica/Principal/Model/Agendamento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/AgendamentosEstetica/Principal/Servelets/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/AgendamentosEstetica/Principal/Servelets/HomeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/AgendamentosEstetica/Principal/Servelets/PerfilServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/AgendamentosEstetica/Principal/Servelets/PerfilClienteServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/br.computacao/escolaweb/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/br.computacao/escolaweb/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/AgendamentoEstetica/Principal/dao/AgendamentoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/AgendamentoEstetica/Principal/dao/AgendamentoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/AgendamentoEstetica/Principal/dao/ClienteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/AgendamentoEstetica/Principal/dao/ClienteDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/AgendamentoEstetica/Principal/dao/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/AgendamentoEstetica/Principal/dao/Dao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/AgendamentoEstetica/Principal/dao/EsteticistaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/AgendamentoEstetica/Principal/dao/EsteticistaDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/AgendamentosEstetica/Principal/Servelets/AgendamentoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/AgendamentosEstetica/Principal/Servelets/AgendamentoServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/AgendamentosEstetica/Principal/Servelets/PerfilAtendenteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/AgendamentosEstetica/Principal/Servelets/PerfilAtendenteServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/AgendamentosEstetica/Principal/Servelets/PerfilClienteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/AgendamentosEstetica/Principal/Servelets/PerfilClienteServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,11 +72,22 @@
       <option name="presentableId" value="Default" />
       <updated>1669556881670</updated>
       <workItem from="1669556883128" duration="250000" />
-      <workItem from="1669557308559" duration="3405000" />
+      <workItem from="1669557308559" duration="17224000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
