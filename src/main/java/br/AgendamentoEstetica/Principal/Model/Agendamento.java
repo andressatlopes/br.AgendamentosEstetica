@@ -24,7 +24,21 @@ public class Agendamento {
 	@OneToOne  
 	private Cliente cliente;
 
-	
+	@OneToOne
+	private Atendente atendente;
+
+	public long getId() {
+		return id;
+	}
+
+	public Atendente getAtendente() {
+		return atendente;
+	}
+
+	public void setAtendente(Atendente atendente) {
+		this.atendente = atendente;
+	}
+
 	public LocalDate getData() {
 		return data;
 	}
