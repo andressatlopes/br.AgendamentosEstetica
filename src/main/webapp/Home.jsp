@@ -11,14 +11,6 @@
 	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 	crossorigin="anonymous">
 
-<link rel="stylesheet"
-	href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-<link rel="preconnect" href="https://fonts.gstatic.com" />
-
-<link
-	href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
-	rel="stylesheet" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta charset="UTF-8">
@@ -29,14 +21,10 @@
 
 		<nav class="navbar navbar-expand-lg navCor static-top">
 			<div class="container">
-				
-				
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ms-auto">
 						<li class="nav-item"><a class="nav-link active"
 							aria-current="page" href="#">Home</a></li>
-						
-							</ul></li>
 					</ul>
 				</div>
 			</div>
@@ -56,15 +44,8 @@
 					<h2 class="title">AF Estética</h2>
 					<p>Uma clinica especializada em beleza.</p>
 					<div class="button-image">
-<!-- 						<div class="imagGoogle"> -->
-<!-- 							<img -->
-<!-- 								src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fpt.m.wikipedia.org%2Fwiki%2FFicheiro%3AGoogle_%2522G%2522_Logo.svg&psig=AOvVaw2IalT7K1Gqb61jfsXFoZfz&ust=1654214728244000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCPjI5529jfgCFQAAAAAdAAAAABAD" -->
-<!-- 								alt="Google" /> -->
-
-<!-- 						</div> -->
 						<form action="ClienteHomeServlet"></form>
 						<a class="button" href="./Agendamento.jsp">Agendar um horário</a>
-
 					</div>
 				</div>
 			</div>
@@ -81,13 +62,21 @@
 				</div>
 				<div class="text">
 					<h2 class="title">Sobre nós</h2>
-					<p><b>AF Estética </b> é um espaço que valoriza a Saúde, o Bem Estar e os Cuidados com a Beleza. Oferecemos a mais alta qualidade em 
-					tratamentos de Estética Facial e Corporal para que você se sinta cada vez melhor e mais bonita. Aqui você encontra um 
-					ambiente agradável e confortável, cuidadosamente preparado com muito carinho e respeito para que você se sinta muito bem recebida. 
-					Nosso atendimento é Personalizado e Privativo, feito em Salas Individuais, priorizando sempre a Segurança e Higiene dos nossos clientes.</p>
+					<p>
+						<b>AF Estética </b> é um espaço que valoriza a Saúde, o Bem Estar
+						e os Cuidados com a Beleza. Oferecemos a mais alta qualidade em
+						tratamentos de Estética Facial e Corporal para que você se sinta
+						cada vez melhor e mais bonita. Aqui você encontra um ambiente
+						agradável e confortável, cuidadosamente preparado com muito
+						carinho e respeito para que você se sinta muito bem recebida.
+						Nosso atendimento é Personalizado e Privativo, feito em Salas
+						Individuais, priorizando sempre a Segurança e Higiene dos nossos
+						clientes.
+					</p>
 					<br />
-					<p>Em todos os tratamentos utilizamos materiais 100% descartáveis. Todos os nossos procedimentos estão em conformidade com as 
-					normas de higiene exigidas pela Vigilância Sanitária.</p>
+					<p>Em todos os tratamentos utilizamos materiais 100%
+						descartáveis. Todos os nossos procedimentos estão em conformidade
+						com as normas de higiene exigidas pela Vigilância Sanitária.</p>
 					<br />
 				</div>
 			</div>
@@ -109,19 +98,22 @@
 					<div class="card">
 						<i class="icon-woman-hair"></i>
 						<h3 class="title">Maquiagem</h3>
-						<p>Maquie-se e desperte o poder que há em você. A melhor make é aquela que combina com você!</p>
+						<p>Maquie-se e desperte o poder que há em você. A melhor make
+							é aquela que combina com você!</p>
 						<b><p>R$120,00</p></b>
 					</div>
 					<div class="card">
 						<i class="icon-trim"></i>
 						<h3 class="title">Manicure</h3>
-						<p>Manicures são responsáveis por embelezar mãos e pés e trazerem alegria a partir de uma unha bem feita.</p>
+						<p>Manicures são responsáveis por embelezar mãos e pés e
+							trazerem alegria a partir de uma unha bem feita.</p>
 						<b><p>R$40,00</p></b>
 					</div>
 					<div class="card">
 						<i class="icon-cosmetic"></i>
 						<h3 class="title">Massagem</h3>
-						<p>Massagem vai além do relaxamento e auxilia no tratamento de doenças</p>
+						<p>Massagem vai além do relaxamento e auxilia no tratamento de
+							doenças</p>
 						<b><p>R$80,00</p></b>
 					</div>
 				</div>
@@ -143,9 +135,12 @@
 
 				<div class="links">
 					<ul class="grid">
-						<li><b><i class="icon-phone"></i> 11 99999-7777</li></b>
-						<li><b><i class="icon-map-pin"></i> Centro, 346</li></b>
-						<li><b><i class="icon-mail"></i> contato@afestetica.com</li></b>
+						<li><b><i class="icon-phone"></i> 11 99999-7777</li>
+						</b>
+						<li><b><i class="icon-map-pin"></i> Centro, 346</li>
+						</b>
+						<li><b><i class="icon-mail"></i> contato@afestetica.com</li>
+						</b>
 					</ul>
 				</div>
 			</div>
