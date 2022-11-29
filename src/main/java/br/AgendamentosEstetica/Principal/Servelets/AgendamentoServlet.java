@@ -47,11 +47,13 @@ public class AgendamentoServlet extends HttpServlet {
         Agendamento a = new Agendamento();
         AgendamentoDao ad = new AgendamentoDao();
         Cliente c = new Cliente();
+        ClienteDao cd = new ClienteDao();
         
         c.setNome(request.getParameter("name"));
         c.setTelefone(request.getParameter("fone"));
         c.setCpf(request.getParameter("cpf"));
         c.setIdade(Integer.parseInt(request.getParameter("idade")));
+        cd.save(c);
         
         switch (request.getParameter("procedimento")) {
 		case "Maquiagem":
@@ -64,8 +66,9 @@ public class AgendamentoServlet extends HttpServlet {
 			a.setProcedimento(Procedimentos.Manicure);
 		break;
 		}
-        a.setCliente(c);
-        a.setData(LocalDate.parse(request.getParameter("Data")));
+        
+        a.setCliente(cd.findById(Cliente.class, c.getId()).get());
+        a.setData(LocalDate.parse(request.getParameter("data")));
         a.setHorario(request.getParameter("Hora"));
         ad.save(a);
     }
