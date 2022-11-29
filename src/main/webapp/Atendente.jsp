@@ -28,9 +28,10 @@
           <th scope="col">Nome</th>
           <th scope="col">Telefone</th>
           <th scope="col">CPF</th>
-          <th scope="col">Procedimento</th>
-          <th scope="col">Horário</th>
+          <th scope="col">Idade</th>
+           <th scope="col">Horário</th>
           <th scope="col">Data</th>
+          <th scope="col">Procedimento</th>
         </tr>
       </thead>
       <tbody>

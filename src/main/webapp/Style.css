@@ -57,40 +57,51 @@ body {
 	/* deixa o texto um pouco mais leve */
 }
 
-navCor{
+.navCor{
 	background: pink;
+}
+.button {
+	background-color: rgb(rgba(12, 179, 245, 0.333));
+	color: var(--text-color-light);
+	height: 3.5rem;
+	display: inline-flex;
+	align-items: center;
+	padding: 0 2rem;
+	border-radius: 0.25rem;
+	font: 500 1rem var(--body-font);
+	transition: background 0.3s;
 }
 
 /*mudança de cor do botão agendar um horario quando o mouse passa por cima*/
-button {
+.button {
 	background-color: pink;
 }
 
 /*cria a linha divisória que começa com uma cor mais clara e dps mais escura*/
-divider-1 {
+.divider-1 {
 	height: 1px;
 	background: linear-gradient(270deg, hsla(var(- -hue), 36%, 57%, 1),
 		hsla(var(- -hue), 65%, 88%, 0.34));
 }
 
-divider-2 {
+.divider-2 {
 	height: 1px;
 	background: linear-gradient(270deg, hsla(var(- -hue), 65%, 88%, 0.34),
 		hsla(var(--hue), 36%, 57%, 1));
 }
 
 /*====  LAYOUT ==== */
-container {
+.container {
 	margin-left: 1.5rem;
 	margin-right: 1.5rem;
 }
 
-grid {
+.grid {
 	display: grid;
 	gap: 2rem;
 }
 
-section {
+.section {
 	padding: calc(5rem + var(- -header-height)) 0;
 	background-color: #F9F9F9;
 }
@@ -305,7 +316,7 @@ nav .menu ul {
 		margin-left: auto;
 		margin-right: auto;
 	}
-	button {
+	.button {
 		height: 3.125rem;
 	}
 
@@ -345,39 +356,44 @@ nav .menu ul {
 	#home .image {
 		order: 1;
 	}
-	#home text {
+	#home .text {
 		order: 0;
 		max-width: 24rem;
 		text-align: left;
 	}
 
 	/* about */
-	#about container {
+	#about .container {
 		margin: 0 auto;
 		grid-auto-flow: column;
 	}
 
 	/* services */
-	cards {
+	.cards {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
-	card {
+	.card {
 		padding-left: 3rem;
 		padding-right: 3rem;
 	}
 
 	/* contact */
-	#contact container {
+	#contact .container {
 		grid-auto-flow: column;
 		align-items: center;
 	}
-	#contact text {
+	#contact .text {
 		max-width: 25rem;
 	}
 
 	/* footer */
-	footer section {
-    padding: 3.75rem 0;
-  }
+	footer.section {
+		padding: 3.75rem 0;
+	}
+	footer .container {
+		grid-auto-flow: column;
+		align-items: center;
+		justify-content: space-between;
+	}
 
 }

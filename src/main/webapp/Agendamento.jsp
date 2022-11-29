@@ -50,6 +50,7 @@
 			</select>
 			
 		<input type="submit" value="AGENDAR">
+		<a class="" href="./Home.jsp">Voltar para página inicial</a>
 	</form>
 	</main>
 	<section class="footer">
