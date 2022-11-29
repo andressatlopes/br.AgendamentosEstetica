@@ -2,6 +2,7 @@ package br.AgendamentosEstetica.Principal.Servelets;
 
 import br.AgendamentoEstetica.Principal.Model.Agendamento;
 import br.AgendamentoEstetica.Principal.Model.Cliente;
+import br.AgendamentoEstetica.Principal.Model.Procedimentos;
 import br.AgendamentoEstetica.Principal.dao.AgendamentoDao;
 import br.AgendamentoEstetica.Principal.dao.ClienteDao;
 
@@ -45,10 +46,25 @@ public class AgendamentoServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Agendamento a = new Agendamento();
         AgendamentoDao ad = new AgendamentoDao();
-        ClienteDao cd = new ClienteDao();
-        Optional<Cliente> c = cd.findById(Cliente.class, Long.parseLong(request.getParameter("id")));
-
-        a.setCliente(c.get());
+        Cliente c = new Cliente();
+        
+        c.setNome(request.getParameter("name"));
+        c.setTelefone(request.getParameter("fone"));
+        c.setCpf(request.getParameter("cpf"));
+        c.setIdade(Integer.parseInt(request.getParameter("idade")));
+        
+        switch (request.getParameter("procedimento")) {
+		case "Maquiagem":
+			 a.setProcedimento(Procedimentos.Maquiagem);
+			break;
+		case "Massagem":
+			a.setProcedimento(Procedimentos.Massagem);
+		break;
+		case "Manicure":
+			a.setProcedimento(Procedimentos.Manicure);
+		break;
+		}
+        a.setCliente(c);
         a.setData(LocalDate.parse(request.getParameter("Data")));
         a.setHorario(request.getParameter("Hora"));
         ad.save(a);

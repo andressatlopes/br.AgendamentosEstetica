@@ -26,6 +26,20 @@ public class Agendamento {
 
 	@OneToOne
 	private Atendente atendente;
+	
+	private Procedimentos procedimento;
+
+	public Procedimentos getProcedimento() {
+		return procedimento;
+	}
+
+	public void setProcedimento(Procedimentos procedimento) {
+		this.procedimento = procedimento;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
 
 	public long getId() {
 		return id;

@@ -31,6 +31,14 @@ public class PerfilClienteServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
 		Cliente c = new Cliente();
 		Endereco e = new Endereco();
 		ClienteDao cd = new ClienteDao();
@@ -44,14 +52,6 @@ public class PerfilClienteServlet extends HttpServlet {
 		e.setNumero(request.getParameter("numero"));
 		c.setEndereco(e);
 		cd.save(c);
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
 	}
 
 }
