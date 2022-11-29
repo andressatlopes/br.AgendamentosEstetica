@@ -14,7 +14,7 @@ public class AgendamentoDao extends Dao<Agendamento, Long> {
         List<Agendamento> employee = new ArrayList<Agendamento>();
         Pessoa cliente;
         try {
-                TypedQuery<Pessoa> query = em.createQuery("SELECT E FROM Pessoa WHERE tipo_pessoa = ?1 and nome = ?2 ", Pessoa.class);
+                TypedQuery<Pessoa> query = em.createQuery("SELECT E FROM Pessoa WHERE tipo_pessoa = ?1 and nome like ?2 ", Pessoa.class);
                 query.setParameter(1, "CLIENTE");
                 query.setParameter(2, Cnome);
                 cliente = query.getSingleResult();
@@ -35,7 +35,7 @@ public class AgendamentoDao extends Dao<Agendamento, Long> {
         List<Agendamento> employee =  new ArrayList<>();
         Pessoa atendente;
         try {
-            TypedQuery<Atendente> query = em.createQuery("SELECT E FROM Pessoa WHERE tipo_pessoa = ?1 and nome = ?2 ", Atendente.class);
+            TypedQuery<Atendente> query = em.createQuery("SELECT E FROM Pessoa WHERE tipo_pessoa = ?1 and nome LIKE ?2 ", Atendente.class);
             query.setParameter(1, "ATENDENTE");
             query.setParameter(2, Anome);
             atendente = query.getSingleResult();
