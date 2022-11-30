@@ -44,9 +44,9 @@
 		<section class="section" id="home">
 			<div class="container grid">
 				<div class="image1">
-					<img
-						src="https://smakon.jp/marrial/wp-content/uploads/2017/01/pixta_28327617_L-768x533.jpg"
-						alt="Imagem mulher maquiando" />
+<!-- 					<img -->
+<!-- 						src="https://smakon.jp/marrial/wp-content/uploads/2017/01/pixta_28327617_L-768x533.jpg" -->
+<!-- 						alt="Imagem mulher maquiando" /> -->
 				</div>
 				<div class="text">
 					<h2 class="title">AF Estética</h2>

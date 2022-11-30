@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>Agendamento</title>
 <link rel="stylesheet" href="StyleAgendamento.css">
+<link rel="stylesheet" href="Style.css">
 </head>
 <body>
 	<main>
