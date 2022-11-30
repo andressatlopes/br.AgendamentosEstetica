@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoGeneratorSettingsState">
+    <option name="ignoredFields">
+      <set>
+        <option value="" />
+      </set>
+    </option>
+    <option name="moduleName" value="br.AgendamentosEstetica" />
+    <option name="moduleNameToSettings">
+      <map>
+        <entry key="br.AgendamentosEstetica">
+          <value>
+            <ModuleSettings>
+              <option name="controllerPackageName" value="br.AgendamentosEstetica.Principal.Servelets" />
+              <option name="controllerParentDirectory" value="$PROJECT_DIR$/src/main/java" />
+              <option name="dtoParentDirectory" value="$PROJECT_DIR$/src/main/java" />
+              <option name="entityPackageName" value="br.AgendamentoEstetica.Principal.dao" />
+              <option name="entityParentDirectory" value="$PROJECT_DIR$/src/main/java" />
+              <option name="mapperXmlParentDirectory" value="C:\Users\limad\OneDrive\Área de Trabalho\Java\Agendamento\br.AgendamentosEstetica\src\main\resources" />
+              <option name="repositoryPackageName" value="br.teste" />
+              <option name="repositoryParentDirectory" value="$PROJECT_DIR$/src/main/java" />
+              <option name="servicePackageName" value="br.AgendamentoEstetica.Principal.Util" />
+              <option name="serviceParentDirectory" value="$PROJECT_DIR$/src/main/java" />
+              <option name="voParentDirectory" value="$PROJECT_DIR$/src/main/java" />
+            </ModuleSettings>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="DatabaseSettingsState">
+    <option name="language" value="pt-BR" />
+  </component>
+</project>

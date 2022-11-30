@@ -1,5 +1,6 @@
 <%@ page import="br.AgendamentoEstetica.Principal.dao.AgendamentoDao" %>
 <%@ page import="br.AgendamentoEstetica.Principal.Model.Agendamento" %>
+<%@page import="br.AgendamentosEstetica.Principal.Servelets.AgendamentoServlet"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="utf-8" %>
   <!DOCTYPE html>
   <html>

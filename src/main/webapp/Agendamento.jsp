@@ -1,5 +1,6 @@
+<%@page import="br.AgendamentosEstetica.Principal.Servelets.AgendamentoServlet"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="ISO-8859-1"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,10 +10,10 @@
 </head>
 <body>
 	<main>
-	<h1>Agendar um Hor·rio</h1>
+	<h1>Agendar um Hor√°rio</h1>
 	
 	<form action="AgendamentoServlet" method="post">
-		<%--@declare id="inlineformselectpref"--%><label for="name">
+		<label for="name">
 			<span>Nome:</span>
 			<input type="text" id="name" name="name">
 		</label>
@@ -52,7 +53,7 @@
 		<input type="submit" value="AGENDAR">
 
 	</form>
-		<a class="" href="./Home.jsp">Voltar para p·gina inicial</a>
+		<a class="" href="./Home.jsp">Voltar para p√°gina inicial</a>
 	</main>
 	<section class="footer">
 		<div class="circle"></div>
