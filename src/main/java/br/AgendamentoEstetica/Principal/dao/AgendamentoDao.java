@@ -5,6 +5,7 @@ import br.AgendamentoEstetica.Principal.Model.Atendente;
 import br.AgendamentoEstetica.Principal.Model.Cliente;
 import br.AgendamentoEstetica.Principal.Model.Pessoa;
 
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,19 +14,17 @@ public class AgendamentoDao extends Dao<Agendamento, Long> {
     
 	public List<Agendamento> AgendaCliente(String Cnome){
         List<Agendamento> employee = new ArrayList<Agendamento>();
-        Pessoa cliente;
+        Class<? extends Query> cliente;
         try {
-                TypedQuery<Pessoa> query = em.createQuery("SELECT E FROM Pessoa WHERE tipo_pessoa = ?1 and nome like ?2 ", Pessoa.class);
-                query.setParameter(1, "CLIENTE");
+                cliente = em.createNativeQuery("SELECT * FROM Pessoa WHERE tipo_pessoa = ?1 and nome like ?2 ", Pessoa.class).getClass();
+                /*query.setParameter(1, "CLIENTE");
                 query.setParameter(2, Cnome);
-                cliente = query.getSingleResult();
+                cliente = query.getSingleResult();*/
         }catch (Exception e){
             cliente = null;
         }
         try{
-            TypedQuery<Agendamento> query2 = em.createQuery("SELECT E FROM Agendamento E WHERE E.cliente_id = ?1", Agendamento.class);
-            query2.setParameter(1,Long.toString(cliente.getId()));
-            employee.addAll(query2.getResultList());
+            employee = em.createNativeQuery("SELECT * FROM Agendamento  WHERE cliente_id = ?1", Agendamento.class ).getResultList();
         }catch (Exception e){
             employee = null;
         }
