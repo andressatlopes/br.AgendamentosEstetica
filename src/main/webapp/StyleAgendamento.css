@@ -8,7 +8,7 @@
 }
 
 body {
-	background: #DCDCDC;
+	background: hsl(13, 1%, 98%);
 	color: black;
 	font-weight: 500;
 	display: flex;

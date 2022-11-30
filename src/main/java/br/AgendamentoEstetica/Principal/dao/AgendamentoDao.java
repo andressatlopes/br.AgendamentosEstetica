@@ -12,6 +12,7 @@ import java.util.List;
 
 public class AgendamentoDao extends Dao<Agendamento, Long> {
     
+	@SuppressWarnings("unchecked")
 	public List<Agendamento> AgendaCliente(String Cnome){
         List<Agendamento> employee = new ArrayList<Agendamento>();
         Class<? extends Query> cliente;

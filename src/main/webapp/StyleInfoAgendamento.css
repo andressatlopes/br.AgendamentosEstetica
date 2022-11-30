@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+.container {
+	margin-left: 1.5rem;
+	margin-right: 1.5rem;
+}
+
+li.nav-item {
+	margin-left: 1100px;
+	font-size: 20px;
+}
+
+/* Table */
+table .th {
+	border: 2px solid black;
+	border-collapse: collapse;
+	padding: 5px 2px 5px 2px;
+}
+
+/*====  Variáveis ==== */
+:root { 
+	--header-height: 4.5rem;
+	 /*colors*/  
+	--hue: 159;
+	--base-color: hsl(var(--hue) 36% 57%);
+	--base-color-second: hsl(var(- -hue) 65% 88%); 
+	--base-color-alt: hsl(var(- -hue) 57% 53%); 
+	--title-color: hsl(var(- -hue) 41% 10%); 
+	--text-color: hsl(0 0% 46%); 
+	--text-color-light: hsl(0 0% 98%); 
+	--body-color: hsl(0 0% 98%);
+	/* fonts  -*/
+	--title-font-size: 1.875rem; 
+	--subtitle-font-size: 1rem; 
+	--title-font: 'Poppins', sans-serif; 
+	--body-font: 'DM Sans', sans-serif;
+}
+
+body {
+	background: hsl(13, 1%, 98%);
+}
+
+/*====  LOGO ============================ */
+
+a.logo {
+	font-size: 25px;
+	color: #FF1493;
+	font-family: Poppins;
+	text-decoration: none;
+}
+
+a.logo .span {
+	color: white;
+}
+
+main h1 {
+	color: #FF1493;
+	font-size: 2rem;
+}
+
+/*====  NAVIGATION ============================ */
+nav {
+  height: var(--header-height);
+  display: flex; /* elemento um do lado do outro */
+  align-items: center;
+  justify-content: space-between; /*justificação*/
+  width: 100%;
+}
+
+nav ul li {
+  text-align: center;
+}
+
+nav ul li a {
+  transition: color 0.2s;
+  position: relative;
+}
+
+nav ul li a:hover, nav ul li a.active {
+	color: var(- -base-color);
+}
+
+nav ul li a::after {
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: var(- -base-color);
+	position: absolute;
+	left: 0;
+	bottom: -1.5rem;
+	transition: width 0.2s;
+}
+
+nav ul li a:hover::after, nav ul li a.active::after {
+	width: 100%;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: white;
+}
+
+.navCor{
+	background: pink;
+}
+
+nav .menu {
+	opacity: 0;
+	visibility: hidden;
+	top: -20rem;
+	transition: 0.2s;
+}
+
+nav .menu ul {
+	display: none;
+}
+
+tr:hover {
+	background-color: #f5f5f5;
+}
+
+tr th {
+	border-bottom: 1px solid #ddd;
+	padding: 15px;
+	text-align: left;
+}
