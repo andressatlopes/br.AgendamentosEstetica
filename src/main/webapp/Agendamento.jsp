@@ -12,7 +12,7 @@
 	<main>
 	<h1>Agendar um Horário</h1>
 	
-	<form action="AgendamentoServlet" method="post">
+	<form action="/AgendamentoServlet" method="post">
 		<label for="name">
 			<span>Nome:</span>
 			<input type="text" id="name" name="name">
