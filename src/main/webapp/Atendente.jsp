@@ -44,11 +44,12 @@
         <td><%item.getCliente().get().getNome();%></td>
         <td><%item.getCliente().get().getTelefone();%></td>
         <td><%item.getCliente().get().getCpf();%></td>
-        <td><%item.getProcedimento().toString();%></td>
+        <td><%item.getProcedimento();%></td>
         <td><%item.getHorario();%></td>
         <td><%item.getData().toString();%></td>
       </tr>
-      <%}%>
+      <%i++;
+      }%>
       </tbody>
     </table>
 

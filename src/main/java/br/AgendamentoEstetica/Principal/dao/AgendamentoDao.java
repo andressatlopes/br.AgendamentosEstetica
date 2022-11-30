@@ -10,7 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AgendamentoDao extends Dao<Agendamento, Long> {
-    public List<Agendamento> AgendaCliente(String Cnome){
+    
+	public List<Agendamento> AgendaCliente(String Cnome){
         List<Agendamento> employee = new ArrayList<Agendamento>();
         Pessoa cliente;
         try {
@@ -24,7 +25,7 @@ public class AgendamentoDao extends Dao<Agendamento, Long> {
         try{
             TypedQuery<Agendamento> query2 = em.createQuery("SELECT E FROM Agendamento E WHERE E.cliente_id = ?1", Agendamento.class);
             query2.setParameter(1,Long.toString(cliente.getId()));
-            employee.add(query2.getSingleResult());
+            employee.addAll(query2.getResultList());
         }catch (Exception e){
             employee = null;
         }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 
 * {
 	margin: 0;
@@ -5,11 +6,11 @@
 	box-sizing: border-box;
 }
 
-.content {
+content {
 	width: 500px;
-  min-height: 560px;    
-  margin: 0px auto;
-  position: relative;
+  	min-height: 560px;    
+  	margin: 0px auto;
+  	position: relative;
 }
 
 ul {
@@ -21,9 +22,58 @@ a {
 	text-decoration: none;
 }
 
-img {
+section.home .image img {
 	align-items: right;
 }
+
+nav-item {
+	color: white;
+}
+
+section.section .image1 img {
+	width: 600px;
+	height: 400px;
+	margin-right: 4rem;
+}
+
+
+/*====  LOGO ============================ */
+
+a.logo {
+	font-size: 25px;
+	color: #FF1493;
+	font-family: Poppins;
+	text-decoration: none;
+}
+
+a.logo .span {
+	color: white;
+}
+
+
+/*====  NAVIGATION ============================ */
+nav {
+  height: var(--header-height);
+  display: flex; /* elemento um do lado do outro */
+  align-items: center;
+  justify-content: space-between; /*justificação*/
+  width: 100%;
+}
+
+nav ul li {
+  text-align: center;
+}
+
+nav ul li a {
+  transition: color 0.2s;
+  position: relative;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: white;
+}
+
 
 /*====  Variáveis ==== */
 :root { 
@@ -49,6 +99,7 @@ html {
 	scroll-behavior: smooth;
 	/* rolagem da pagina, smooth faz a rolagem de forma suave*/
 }
+
 body {
 	font: 400 1rem var(- -body-font);
 	color: var(- -text-color);
@@ -60,8 +111,8 @@ body {
 .navCor{
 	background: pink;
 }
+
 .button {
-	background-color: rgb(rgba(12, 179, 245, 0.333));
 	color: var(--text-color-light);
 	height: 3.5rem;
 	display: inline-flex;
@@ -70,24 +121,23 @@ body {
 	border-radius: 0.25rem;
 	font: 500 1rem var(--body-font);
 	transition: background 0.3s;
+	text-decoration: none;
 }
 
 /*mudança de cor do botão agendar um horario quando o mouse passa por cima*/
 .button {
-	background-color: pink;
+	background-color: #FF1493;
 }
 
 /*cria a linha divisória que começa com uma cor mais clara e dps mais escura*/
 .divider-1 {
 	height: 1px;
-	background: linear-gradient(270deg, hsla(var(- -hue), 36%, 57%, 1),
-		hsla(var(- -hue), 65%, 88%, 0.34));
+	background: linear-gradient(45deg, #FFB6C1, #FF1493);
 }
 
 .divider-2 {
 	height: 1px;
-	background: linear-gradient(270deg, hsla(var(- -hue), 65%, 88%, 0.34),
-		hsla(var(--hue), 36%, 57%, 1));
+	background: linear-gradient(45deg, #FFB6C1, #FF1493);
 }
 
 /*====  LAYOUT ==== */
@@ -122,7 +172,7 @@ body {
 	color: #727272;
 }
 
-#header {
+header.header {
 	border-bottom: 1px solid #e4e4e4;
 	margin-bottom: 2rem;
 	display: flex;
@@ -132,10 +182,6 @@ body {
 	z-index: 100;
 	background-color: var(- -body-color);
 	width: 100%;
-}
-
-#header.scroll {
-	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
 }
 
 /*====  NAVIGATION ============================ */
@@ -186,30 +232,6 @@ nav .menu ul {
 	display: none;
 }
 
-
-/*====  HOME ============================ */
-#home {
-	overflow: hidden;
-}
-
-#home .container {
-	margin: 0;
-}
-
-#home .text {
-	margin-left: 1.5rem;
-	margin-right: 1.5rem;
-	text-align: center;
-}
-
-#home .text h1 {
-	margin-bottom: 1rem;
-}
-
-#home .text p {
-	margin-bottom: 2rem;
-}
-
 /*====  ABOUT ============================ */
 #about {
 	background: white;
@@ -247,6 +269,8 @@ nav .menu ul {
 	margin-right: 1.5rem;
 }
 
+
+
 /*====  SERVICES ============================ */
 .cards.grid {
 	gap: 1.5rem;
@@ -272,6 +296,8 @@ nav .menu ul {
 	margin-bottom: 0.75rem;
 }
 
+
+
 /*====  CONTACT ============================ */
 #contact .grid {
 	gap: 4rem;
@@ -289,6 +315,8 @@ nav .menu ul {
 #contact ul li i {
 	color: var(- -base-color);
 }
+
+
 
 /*====  FOOTER ============================ */
 
@@ -347,20 +375,6 @@ nav .menu ul {
 		margin-top: var(- -header-height);
 	}
 
-	/* home */
-	#home .container {
-		grid-auto-flow: column;
-		justify-content: space-between;
-		margin: 0 auto;
-	}
-	#home .image {
-		order: 1;
-	}
-	#home .text {
-		order: 0;
-		max-width: 24rem;
-		text-align: left;
-	}
 
 	/* about */
 	#about .container {

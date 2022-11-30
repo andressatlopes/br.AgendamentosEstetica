@@ -21,10 +21,18 @@
 
 		<nav class="navbar navbar-expand-lg navCor static-top">
 			<div class="container">
+				<a class="logo" href="#">af<span class="span">estética</span>.
+				</a>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ms-auto">
 						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="#">Home</a></li>
+							aria-current="page" href="#home">Inicio</a></li>
+						<li class="nav-item"><a class="nav-link active"
+							aria-current="page" href="#about">Sobre</a></li>
+						<li class="nav-item"><a class="nav-link active"
+							aria-current="page" href="#services">Serviços</a></li>
+						<li class="nav-item"><a class="nav-link active"
+							aria-current="page" href="#contact">Contato</a></li>
 					</ul>
 				</div>
 			</div>
@@ -35,7 +43,7 @@
 		<!-- HOME -->
 		<section class="section" id="home">
 			<div class="container grid">
-				<div class="image">
+				<div class="image1">
 					<img
 						src="https://smakon.jp/marrial/wp-content/uploads/2017/01/pixta_28327617_L-768x533.jpg"
 						alt="Imagem mulher maquiando" />

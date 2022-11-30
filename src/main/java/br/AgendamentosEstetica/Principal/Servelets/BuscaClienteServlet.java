@@ -16,6 +16,6 @@ public class BuscaClienteServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 
-        request.getRequestDispatcher(".\\src\\main\\webapp");
+        response.sendRedirect("AtendentePorCliente.jsp");
     }
 }

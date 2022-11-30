@@ -39,7 +39,7 @@
     <tbody>
     <%
         AgendamentoDao ad = new AgendamentoDao();
-        for (Agendamento item: ad.AgendaCliente(nome)) {
+        for (Agendamento item : ad.AgendaCliente("Natalia")) {
             int i = 1;%>
     <tr>
         <th scope="row"><%Integer.toString(i);%></th>
