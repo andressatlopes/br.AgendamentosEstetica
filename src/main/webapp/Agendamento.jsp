@@ -11,8 +11,8 @@
 	<main>
 	<h1>Agendar um Horário</h1>
 	
-	<form action="">
-		<label for="name">
+	<form action="AgendamentoServlet" method="post">
+		<%--@declare id="inlineformselectpref"--%><label for="name">
 			<span>Nome:</span>
 			<input type="text" id="name" name="name">
 		</label>
@@ -50,8 +50,9 @@
 			</select>
 			
 		<input type="submit" value="AGENDAR">
-		<a class="" href="./Home.jsp">Voltar para página inicial</a>
+
 	</form>
+		<a class="" href="./Home.jsp">Voltar para página inicial</a>
 	</main>
 	<section class="footer">
 		<div class="circle"></div>
