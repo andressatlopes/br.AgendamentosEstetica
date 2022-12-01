@@ -21,10 +21,10 @@ public class BuscaClienteServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	
-    	AgendamentoDao ad = new AgendamentoDao();
-    	List<Agendamento> agenda = ad.AgendaCliente(request.getParameter("nomeCliente"));
-    	request.setAttribute("lista", agenda );
-    	
+//    	AgendamentoDao ad = new AgendamentoDao();
+//    	List<Agendamento> agenda = ad.AgendaCliente(request.getParameter("nomeCliente"));
+
+        request.setAttribute("nomeCliente", request.getParameter("nomeCliente") );
     	RequestDispatcher dispacher = request.getRequestDispatcher("AtendentePorCliente.jsp");
         dispacher.forward(request, response);
     }

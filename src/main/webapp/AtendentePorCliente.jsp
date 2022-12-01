@@ -17,8 +17,9 @@
 <body>
 <%
     //String nome = request.getParameter("nameCliente");
+    AgendamentoDao ad = new AgendamentoDao();
 	List<Agendamento> agendamentos = new ArrayList<Agendamento>();
-	agendamentos = (List<Agendamento>) request.getAttribute("lista");
+	agendamentos = ad.AgendaCliente(request.getParameter("nomeCliente"));
 %>
 <h1>Lista de Agendamentos:</h1>
 <div class="input-group">

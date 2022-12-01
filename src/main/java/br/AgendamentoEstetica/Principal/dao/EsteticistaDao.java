@@ -18,7 +18,7 @@ public class EsteticistaDao extends Dao<Esteticista, Long> {
             lista.addAll(query.getResultList());
         }catch (Exception e){
             lista = null;
-        };
+        }
         return lista;
     }
 }

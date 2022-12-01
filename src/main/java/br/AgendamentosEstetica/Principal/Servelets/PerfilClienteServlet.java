@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class PerfilServlet
  */
-@WebServlet("/PerfilServlet")
+@WebServlet(name = "PerfilServlet", value = "/PerfilServlet")
 public class PerfilClienteServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

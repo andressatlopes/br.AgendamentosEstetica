@@ -1,7 +1,9 @@
 package br.AgendamentosEstetica.Principal.Servelets;
 
 import br.AgendamentoEstetica.Principal.Model.Atendente;
+import br.AgendamentoEstetica.Principal.Model.Cliente;
 import br.AgendamentoEstetica.Principal.dao.AtendenteDao;
+import br.AgendamentoEstetica.Principal.dao.ClienteDao;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -32,38 +34,29 @@ public class HomeServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		ClienteDao cd = new ClienteDao();
+		long id = Long.parseLong(request.getParameter("id"));
+		Cliente c = cd.findById(Cliente.class, id).get();
+		cd.delete(c);
+
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String login = request.getParameter("UserName");
-		String senha = request.getParameter("UserPwd");
-		Atendente a = new Atendente();
-		AtendenteDao ad = new AtendenteDao();
-		
-		a.setLogin(login);
-		a.setSenha(senha);
+		Cliente c = new Cliente();
+		ClienteDao cd = new ClienteDao();
 
-		
-		for (Atendente item : ad.findAll(null)) {
-			if (item.getSenha() == senha) {
-				  RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/Perfil.jsp");
-				  dispatcher.forward(request, response);
-			}
-			else {
-				response.setHeader("Refresh", "0; URL=");
-			}
+		if(request.getParameter("id") != null){
+
 		}
 		
 		//doGet(request, response);
 	}
 	
 	protected void Botao(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-		flag = Boolean.parseBoolean(getServletInfo());
+
 	}
 
 }
