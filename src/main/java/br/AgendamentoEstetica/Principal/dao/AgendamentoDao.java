@@ -15,17 +15,22 @@ public class AgendamentoDao extends Dao<Agendamento, Long> {
 	@SuppressWarnings("unchecked")
 	public List<Agendamento> AgendaCliente(String Cnome){
         List<Agendamento> employee = new ArrayList<Agendamento>();
-        Class<? extends Query> cliente;
+        //Class<? extends Query> cliente;
+         Pessoa cliente = new Pessoa();
         try {
-                cliente = em.createNativeQuery("SELECT * FROM Pessoa WHERE tipo_pessoa = ?1 and nome like ?2 ", Pessoa.class).getClass();
-                /*query.setParameter(1, "CLIENTE");
-                query.setParameter(2, Cnome);
-                cliente = query.getSingleResult();*/
+        		TypedQuery<Pessoa> query = em.createQuery("SELECT e FROM Pessoa e WHERE e.email = null and e.nome = ?1 ", Pessoa.class);
+                query.setParameter(1, Cnome);
+                cliente = query.getResultList().get(0);
         }catch (Exception e){
-            cliente = null;
+            //query = null;
         }
         try{
-            employee = em.createNativeQuery("SELECT * FROM Agendamento  WHERE cliente_id = ?1", Agendamento.class ).getResultList();
+        	//em.clear();
+            TypedQuery<Agendamento> query2 = em.createQuery("SELECT e FROM Agendamento e  WHERE e.id = ?1 ", Agendamento.class);
+           // String id = Long.toString();
+            query2.setParameter(1, cliente.getId());
+        	//employee = em.createNativeQuery("SELECT e FROM Agendamento e  WHERE e.id like " +  Long.toString(cliente.getId()), Agendamento.class ).getResultList();
+            employee = query2.getResultList();
         }catch (Exception e){
             employee = null;
         }
@@ -51,6 +56,7 @@ public class AgendamentoDao extends Dao<Agendamento, Long> {
             employee = null;
         }
         return employee;
+   
     }
 
 }

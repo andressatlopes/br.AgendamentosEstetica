@@ -1,9 +1,9 @@
+<%@page import="java.util.List"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page import="br.AgendamentoEstetica.Principal.dao.AgendamentoDao" %>
 <%@ page import="br.AgendamentoEstetica.Principal.Model.Agendamento" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="utf-8" %>
-<%
-    String nome = request.getParameter("nameCliente");
-%>
+
 <!DOCTYPE html>
 <html>
 
@@ -15,7 +15,11 @@
 </head>
 
 <body>
-
+<%
+    //String nome = request.getParameter("nameCliente");
+	List<Agendamento> agendamentos = new ArrayList<Agendamento>();
+	agendamentos = (List<Agendamento>) request.getAttribute("lista");
+%>
 <h1>Lista de Agendamentos:</h1>
 <div class="input-group">
     <form action="BuscaClienteServlet" method="post">
@@ -38,8 +42,7 @@
     </thead>
     <tbody>
     <%
-        AgendamentoDao ad = new AgendamentoDao();
-        for (Agendamento item : ad.AgendaCliente("Natalia")) {
+        for (Agendamento item : agendamentos) {
             int i = 1;%>
     <tr>
         <th scope="row"><%Integer.toString(i);%></th>
@@ -50,7 +53,10 @@
         <td><%item.getHorario();%></td>
         <td><%item.getData().toString();%></td>
     </tr>
-    <%}%>
+    <%i ++;
+    }
+     
+     %>
     </tbody>
 </table>
 

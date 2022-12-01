@@ -84,5 +84,6 @@ public class AgendamentoServlet extends HttpServlet {
         a.setData(LocalDate.parse(request.getParameter("data")));
         a.setHorario(request.getParameter("Hora"));
         ad.save(a);
+        response.sendRedirect("InformacoesAgendamento.jsp");
     }
 }

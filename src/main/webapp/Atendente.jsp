@@ -18,7 +18,7 @@
     <div class="input-group">
       <form action="BuscaClienteServlet" method="post">
         <input type="search" class="form-control rounded" id="nameCliente" name="nameCliente" placeholder="Digite o nome do cliente" aria-label="Search" aria-describedby="search-addon" />
-        <button type="button" id="search" name="search" class="btn btn-outline-primary">Procurar</button>
+        <button type="submit" id="search" name="search" class="btn btn-outline-primary">Procurar</button>
       </form>
     </div>
     <table class="table table-striped">
