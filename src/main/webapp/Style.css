@@ -156,8 +156,8 @@ body {
 	background-color: #F9F9F9;
 }
 
-.section .title {
-	margin-bottom: 1rem;
+section.home {
+	align-items: center;
 }
 
 .section .subtitle {

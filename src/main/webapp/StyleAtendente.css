@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.tablecss{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 65%;
+    align-self: center;
+    /* left: 50%; */
+    margin-left: 20%;
+}
+
+.linha{
+    padding: 20px !important; 
+}

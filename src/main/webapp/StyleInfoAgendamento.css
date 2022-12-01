@@ -19,6 +19,20 @@ ul {
 	margin-right: 1.5rem;
 }
 
+.tablecss{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 65%;
+    align-self: center;
+    /* left: 50%; */
+    margin-left: 20%;
+}
+
+.linha{
+    padding: 20px !important; 
+}
+
 /*====  Variáveis ==== */
 :root { 
 	--header-height: 4.5rem;

@@ -6,17 +6,13 @@
 <head>
 <link rel="stylesheet" href="Style.css">
 <link rel="stylesheet" href="StyleInfoAgendamento.css">
-
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-	crossorigin="anonymous">
+<link rel="stylesheet" href="StyleAtendente.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta charset="UTF-8">
-<title>Home</title>
+<title>Informações</title>
 </head>
 <body>
 	<header id="header">
@@ -36,10 +32,10 @@
 		</nav>
 	</header>
 
-	<main>
-		<h1>Informações do Agendamento</h1>
+	<h1>Informações do Agendamento</h1>
 
-		<table border="1">
+	<div class="tablecss">
+		<table class="table table-hover">
 			<thead>
 				<tr>
 					<th>Nome</th>
@@ -52,18 +48,21 @@
 					<th></th>
 				</tr>
 			</thead>
+			 <tbody>
 			<tr>
-				<td>Body1 linha1</td>
-				<td>Body2 linha1</td>
-				<td>Body3 linha1</td>
-				<td>Body1 linha1</td>
-				<td>Body2 linha1</td>
-				<td>Body3 linha1</td>
-				<td>Body1 linha1</td>
-				<td>Excluir Editar</td>
+				<td class="linha"></td>
+				<td class="linha"></td>
+				<td class="linha"></td>
+				<td class="linha"></td>
+				<td class="linha"></td>
+				<td class="linha"></td>
+				<td class="linha"></td>
+				<td><button class="btn btn-danger">Excluir</button></td>
+				<td><button class="btn btn-primary">Editar</button></td>
 			</tr>
+		</tbody>
 		</table>
-	</main>
+	</div>
 
 </body>
 </html>
