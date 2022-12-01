@@ -68,8 +68,10 @@
         <td class="linha"><%item.getProcedimento();%></td>
         <td class="linha"><%item.getHorario();%></td>
         <td class="linha"><%item.getData().toString();%></td>
-        <td class="linha"></td>
-        
+        <td class="linha">><a type="button"
+                              class="btn btn-outline-info"
+                              href="EditAgenda.jsp?id=<%=item.getId()%>">Editar</a></td>
+
       </tr>
       <%i++;
       }%>

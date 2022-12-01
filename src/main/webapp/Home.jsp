@@ -33,6 +33,8 @@
 							aria-current="page" href="#services">Serviços</a></li>
 						<li class="nav-item"><a class="nav-link active"
 							aria-current="page" href="#contact">Contato</a></li>
+						<li class="nav-item"><a class="nav-link active"
+							aria-current="page" href="Atendente.jsp">Todos os agendamentos</a></li>
 					</ul>
 				</div>
 			</div>

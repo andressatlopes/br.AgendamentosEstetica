@@ -53,6 +53,8 @@
         <td><%item.getProcedimento().toString();%></td>
         <td><%item.getHorario();%></td>
         <td><%item.getData().toString();%></td>
+        <td><a type="button" class="btn btn-outline-danger"
+                href="<%=request.getContextPath()%>/PerfilServlet?cartaoid=<%=item.getId()%>">Excluir</a></td>
     </tr>
     <%i ++;
     }

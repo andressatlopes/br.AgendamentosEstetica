@@ -30,7 +30,9 @@ public class PerfilClienteServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		ClienteDao cd = new ClienteDao();
+		long id = Long.parseLong(request.getParameter("id"));
+		Cliente c = cd.findById(Cliente.class, id).get();
 
 	}
 

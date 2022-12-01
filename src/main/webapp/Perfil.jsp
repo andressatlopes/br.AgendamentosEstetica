@@ -30,7 +30,7 @@
 			<td class="linha"><%c.getTelefone();%></td>
 			<td class="linha"><%c.getCpf();%></td>
 			<td class="linha"><%c.getIdade();%></td>
-			<td><a class="btn btn-danger" href="<%=request.getContextPath()%>HomeServlet?cartaoid=<%=c%>.getId()%>">Excluir</a> >Excluir</a></td>
+			<td><a class="btn btn-danger" href="<%=request.getContextPath()%>HomeServlet?cartaoid=<%=c%>.getId()%>">Excluir</a> >Excluir</td>
 <%--	//href="<%=request.getContextPath()%>/ServletCartao\?cartaoid=<%=obj.getId()%>">Excluir</a>--%>
 		</tr>
 		</tbody>
