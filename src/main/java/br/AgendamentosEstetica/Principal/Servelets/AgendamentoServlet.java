@@ -11,8 +11,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Time;
 import java.text.DateFormat;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.List;
@@ -72,7 +74,7 @@ public class AgendamentoServlet extends HttpServlet {
             }
 
             a.setCliente(cd.findById(Cliente.class, c.getId()).get());
-            a.setHorario("horario");
+            a.setHorario(request.getParameter("horario"));
             a.setData(LocalDate.parse(request.getParameter("data"), DateTimeFormatter.ISO_DATE));
             ad.save(a);
             agendaid = a.getId();
@@ -90,8 +92,10 @@ public class AgendamentoServlet extends HttpServlet {
             a.setHorario("horario");
             a.setData(LocalDate.parse(request.getParameter("data"), DateTimeFormatter.ISO_DATE));
         }
-        request.setAttribute("agendaId", agendaid);
-        RequestDispatcher dispacher = request.getRequestDispatcher("InformacoesAgendamento.jsp");
-        dispacher.forward(request, response);
+        //request.setAttribute("agendaId", agendaid);
+        //RequestDispatcher dispacher = request.getRequestDispatcher("InformacoesAgendamento.jsp");
+        //dispacher.forward(request, response);
+        response.sendRedirect("InformacoesAgendamento.jsp?agendaId="+ agendaid);
+        
     }
 }

@@ -1,7 +1,6 @@
 <%@ page import="br.AgendamentoEstetica.Principal.Model.Agendamento" %>
 <%@ page import="br.AgendamentoEstetica.Principal.dao.AgendamentoDao" %>
-<%@ page import="static org.graalvm.compiler.nodeinfo.Verbosity.Id" %><%--
-  Created by IntelliJ IDEA.
+<%-- Created by IntelliJ IDEA.
   User: limad
   Date: 01/12/2022
   Time: 10:18
@@ -26,22 +25,22 @@
         <input type="hidden" name="agendaId" value="<%=id%>" />
         <label for="name">
             <span>Nome:</span>
-            <input type="text" value="<%agenda.getCliente().get().getNome();%>" id="name" name="name">
+            <input type="text" value="<%=agenda.getCliente().get().getNome()%>" id="name" name="name">
         </label>
 
         <label for="fone">
             <span>Telefone:</span>
-            <input type="tel" value="<%agenda.getCliente().get().getTelefone();%>" id="fone" name="fone">
+            <input type="tel" value="<%=agenda.getCliente().get().getTelefone()%>" id="fone" name="fone">
         </label>
 
         <label for="cpf">
             <span>CPF:</span>
-            <input type="text" value="<%agenda.getCliente().get().setTelefone();%>" id="cpf" name="cpf">
+            <input type="text" value="<%=agenda.getCliente().get().getCpf()%>" id="cpf" name="cpf">
         </label>
 
         <label for="idade">
             <span>Idade:</span>
-            <input type="text" value="<%agenda.getCliente().get().getTelefone();%>" id="idade" name="idade">
+            <input type="text" value="<%=agenda.getCliente().get().getIdade()%>" id="idade" name="idade">
         </label>
 
         <label for="horario">

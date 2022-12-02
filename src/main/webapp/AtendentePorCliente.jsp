@@ -15,12 +15,7 @@
 </head>
 
 <body>
-<%
-    //String nome = request.getParameter("nameCliente");
-    AgendamentoDao ad = new AgendamentoDao();
-	List<Agendamento> agendamentos = new ArrayList<Agendamento>();
-	agendamentos = ad.AgendaCliente(request.getParameter("nomeCliente"));
-%>
+
 <h1>Lista de Agendamentos:</h1>
 <div class="input-group">
     <form action="BuscaClienteServlet" method="post">

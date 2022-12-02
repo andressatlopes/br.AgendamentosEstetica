@@ -1,3 +1,7 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
+<%@page import="br.AgendamentoEstetica.Principal.Model.Agendamento"%>
+<%@page import="br.AgendamentoEstetica.Principal.dao.AgendamentoDao"%>
 <%@page import="br.AgendamentosEstetica.Principal.Servelets.HomeServlet"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -15,6 +19,16 @@
 <title>Informações</title>
 </head>
 <body>
+<%
+    //String nome = request.getParameter("nameCliente");
+out.print(request.getParameter("agendaId"));    
+AgendamentoDao ad = new AgendamentoDao();
+	
+    Agendamento a = ad.findById(Agendamento.class, Long.parseLong(request.getParameter("agendaId"))).get();
+	
+%>
+
+
 	<header id="header">
 
 		<nav class="navbar navbar-expand-lg navCor static-top">
@@ -38,25 +52,25 @@
 		<table class="table table-hover">
 			<thead>
 				<tr>
-					<th>Nome</th>
-					<th>Telefone</th>
-					<th>CPF</th>
-					<th>Idade</th>
-					<th>Horário</th>
-					<th>Data</th>
-					<th>Procedimento</th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
 					<th></th>
 				</tr>
 			</thead>
 			 <tbody>
 			<tr>
-				<td class="linha"></td>
-				<td class="linha"></td>
-				<td class="linha"></td>
-				<td class="linha"></td>
-				<td class="linha"></td>
-				<td class="linha"></td>
-				<td class="linha"></td>
+				<td class="linha"><%=a.getCliente().get().getNome()%></td>
+				<td class="linha"><%=a.getCliente().get().getTelefone()%></td>
+				<td class="linha"><%=a.getCliente().get().getCpf()%></td>
+				<td class="linha"><%=a.getCliente().get().getIdade()%></td>
+				<td class="linha"><%=a.getHorario()%></td>
+				<td class="linha"><%=a.getData()%></td>
+				<td class="linha"><%=a.getProcedimento()%></td>
 				<td><button class="btn btn-danger">Excluir</button></td>
 				<td><button class="btn btn-primary">Editar</button></td>
 			</tr>

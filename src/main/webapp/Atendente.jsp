@@ -62,15 +62,16 @@
       int i = 1;%>
       <tr>
         <th scope="row"><%Integer.toString(i);%></th>
-        <td class="linha"><%item.getCliente().get().getNome();%></td>
-        <td class="linha"><%item.getCliente().get().getTelefone();%></td>
-        <td class="linha"><%item.getCliente().get().getCpf();%></td>
-        <td class="linha"><%item.getProcedimento();%></td>
-        <td class="linha"><%item.getHorario();%></td>
-        <td class="linha"><%item.getData().toString();%></td>
-        <td class="linha">><a type="button"
+        <td class="linha"><%=item.getCliente().get().getNome()%></td>
+        <td class="linha"><%=item.getCliente().get().getTelefone()%></td>
+        <td class="linha"><%=item.getCliente().get().getCpf()%></td>
+        <td class="linha"><%=item.getProcedimento()%></td>
+        <td class="linha"><%=item.getHorario()%></td>
+        <td class="linha"><%=item.getData().toString()%></td>
+        <td class="linha"><a type="button"
                               class="btn btn-outline-info"
-                              href="EditAgenda.jsp?id=<%=item.getId()%>">Editar</a></td>
+                              href="EditAgenda.jsp?id=<%=item.getId()%>">Editar</a>
+                              </td>
 
       </tr>
       <%i++;

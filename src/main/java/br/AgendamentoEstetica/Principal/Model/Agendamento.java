@@ -12,7 +12,7 @@ public class Agendamento {
 	private long id;
 	@Column(name = "data", columnDefinition = "DATE")
 	private LocalDate data;
-	
+	@Column(name= "horario")
 	private String horario;
 	
 	@OneToOne  
@@ -21,7 +21,7 @@ public class Agendamento {
 	@OneToOne
 	private Atendente atendente;
 	
-	@Enumerated
+	@Enumerated(EnumType.STRING)
 	private Procedimentos procedimento;
 
 	public Procedimentos getProcedimento() {
