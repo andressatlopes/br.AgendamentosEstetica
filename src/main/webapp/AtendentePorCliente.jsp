@@ -6,7 +6,9 @@
 
 <!DOCTYPE html>
 <html>
-
+<%AgendamentoDao ad = new AgendamentoDao();
+    String nome = request.getParameter("nameCliente");
+%>
 <head>
     <meta charset="UTF-8">
     <title>Atendente</title>
@@ -38,18 +40,21 @@
     </thead>
     <tbody>
     <%
-        for (Agendamento item : agendamentos) {
+        for (Agendamento item : ad.AgendaAtendente(nome)){
             int i = 1;%>
     <tr>
         <th scope="row"><%Integer.toString(i);%></th>
-        <td><%item.getCliente().get().getNome();%></td>
-        <td><%item.getCliente().get().getTelefone();%></td>
-        <td><%item.getCliente().get().getCpf();%></td>
-        <td><%item.getProcedimento().toString();%></td>
-        <td><%item.getHorario();%></td>
-        <td><%item.getData().toString();%></td>
-        <td><a type="button" class="btn btn-outline-danger"
-                href="<%=request.getContextPath()%>/PerfilServlet?cartaoid=<%=item.getId()%>">Excluir</a></td>
+        <td><%=item.getCliente().get().getNome()%></td>
+        <td><%=item.getCliente().get().getTelefone()%></td>
+        <td><%=item.getCliente().get().getCpf()%></td>
+        <td><%=item.getProcedimento().toString()%></td>
+        <td><%=item.getHorario()%></td>
+        <td><%=item.getData()%></td>
+        <td><a type="button"
+               class="btn btn-outline-info"
+               href="EditAgenda.jsp?id=<%=item.getId()%>">Editar</a>
+            <a type="button" class="btn btn-outline-danger"
+                href="<%=request.getContextPath()%>/agendaId?cartaoid=<%=item.getId()%>">Excluir</a></td>
     </tr>
     <%i ++;
     }

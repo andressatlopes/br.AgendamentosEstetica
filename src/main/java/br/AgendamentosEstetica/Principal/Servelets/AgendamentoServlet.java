@@ -91,10 +91,8 @@ public class AgendamentoServlet extends HttpServlet {
             cd.update(c);
             a.setHorario("horario");
             a.setData(LocalDate.parse(request.getParameter("data"), DateTimeFormatter.ISO_DATE));
+            ad.update(a);
         }
-        //request.setAttribute("agendaId", agendaid);
-        //RequestDispatcher dispacher = request.getRequestDispatcher("InformacoesAgendamento.jsp");
-        //dispacher.forward(request, response);
         response.sendRedirect("InformacoesAgendamento.jsp?agendaId="+ agendaid);
         
     }

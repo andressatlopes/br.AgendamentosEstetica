@@ -15,6 +15,8 @@
 %>
 <html>
 <head>
+    <link rel="stylesheet" href="StyleAgendamento.css">
+    <link rel="stylesheet" href="Style.css">
     <title>Title</title>
 </head>
 <body>

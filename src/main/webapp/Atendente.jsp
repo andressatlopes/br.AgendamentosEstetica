@@ -9,7 +9,6 @@
     <meta charset="UTF-8">
     <title>Atendente</title>
     <link rel="stylesheet" href="Style.css">
-    <link rel="stylesheet" href="StyleAtendente.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   </head>
 
@@ -35,7 +34,7 @@
     <div class="input-group">
       <form action="BuscaClienteServlet" method="post">
         <input type="search" class="form-control rounded" id="nameCliente" name="nameCliente" placeholder="Digite o nome do cliente" aria-label="Search" aria-describedby="search-addon" />
-        <button type="submit" id="search" name="search" class="btn btn-outline-primary">Procurar</button>
+        <a type="submit" id="search" name="search" class="btn btn-outline-primary">Procurar</a>
       </form>
     </div>
 
@@ -70,7 +69,9 @@
         <td class="linha"><%=item.getData().toString()%></td>
         <td class="linha"><a type="button"
                               class="btn btn-outline-info"
-                              href="EditAgenda.jsp?id=<%=item.getId()%>">Editar</a>
+                              href="EditAgenda.jsp?id=<%=item.getId()%>">Editar</a><a
+                type="button" class="btn btn-outline-danger"
+                href="<%=request.getContextPath()%>/AgendamentoServlet?agendaId=<%=item.getId()%>">Excluir</a>
                               </td>
 
       </tr>

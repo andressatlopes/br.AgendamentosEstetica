@@ -23,9 +23,7 @@ public class BuscaClienteServlet extends HttpServlet {
     	
 //    	AgendamentoDao ad = new AgendamentoDao();
 //    	List<Agendamento> agenda = ad.AgendaCliente(request.getParameter("nomeCliente"));
-
-        request.setAttribute("nomeCliente", request.getParameter("nomeCliente") );
-    	RequestDispatcher dispacher = request.getRequestDispatcher("AtendentePorCliente.jsp");
-        dispacher.forward(request, response);
+        String nome = request.getParameter("nameCliente");
+        response.sendRedirect("AtendentePorCliente.jsp?");
     }
 }
